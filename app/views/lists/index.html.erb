@@ -1,0 +1,24 @@
+  <div class="banner"">
+    <div class="container">
+
+      <h1 mt-5>Le Wagon brings <strong>tech skills</strong> to <strong>creative people</strong>!</h1>
+    </div>
+</div>
+
+
+<div class="container mt-5">
+  <div class="d-flex justify-content-center">
+    <div class="col-12 col-md-8">
+    <h1>Movies Lists</h1>
+      <%= link_to new_list_path do%>
+          <i class="fas fa-plus"></i>
+        <% end %>
+      <% @lists.each do |list| %>
+        <div class="card-category mt-5" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+          <%= list.name %>
+          <div><%= link_to '', list_path(list), class: 'card-trip-link' %></div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

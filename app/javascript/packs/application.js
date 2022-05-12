@@ -12,3 +12,6 @@ import "bootstrap";
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
+
+// rails generate model Review content:text restaurant:references
+// rails db:migrate
