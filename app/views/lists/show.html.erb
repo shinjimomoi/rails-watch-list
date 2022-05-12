@@ -14,10 +14,11 @@ url(http://source.unsplash.com/featured?<%= @list.name %>&<%= rand(1000) %>)">
 </div>
 </div>
 
+
 <div class="container mt-5">
   <div class="ms-2">
-    <%= link_to 'Go back', lists_path, class: 'btn btn-primary' %>
-    <%= link_to 'Add movie', new_list_bookmark_path(@list), class: 'btn btn-primary' %>
+    <%= link_to 'Go back', lists_path, class: 'btn btn-primary btn-sm' %>
+    <%= link_to 'Add movie', new_list_bookmark_path(@list), class: 'btn btn-primary btn-sm' %>
   </div>
   <div class="d-flex flex-wrap">
     <% @list.bookmarks.each do |bookmark| %>

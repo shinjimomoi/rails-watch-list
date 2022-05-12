@@ -11,13 +11,12 @@
     </div>
   </div>
 </div>
-
 <div class="container mt-5">
-      <%= link_to 'Add a list', new_list_path, class: 'btn btn-primary' %>
-  <div class="d-flex justify-content-center">
-    <div class="mt-3 col-12">
+  <div class="d-flex flex-wrap justify-content-center">
+    <div class="mt-3 col-8">
+      <%= link_to 'Add a list', new_list_path, class: 'btn btn-primary btn-sm' %>
       <% @lists.each do |list| %>
-        <div class="card-category mt-2 mb-5" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+        <div class="card-category mt-2 mb-3" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
         url(http://source.unsplash.com/featured?<%= list.name %>&<%= rand(1000) %>)">
           <%= list.name %>
           <div>
