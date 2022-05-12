@@ -28,10 +28,12 @@ url(http://source.unsplash.com/featured?<%= @list.name %>&<%= rand(1000) %>)">
           <%= image_tag bookmark.movie.poster_url, alttext: 'movie_image' %>
           <div class="card-trip-infos">
             <div>
-              <%= bookmark.movie.title %>
-              <br>
-              <strong class="red"><%= bookmark.movie.rating %></strong>
-                <p><%= bookmark.comment %></p>
+              <h6><%= bookmark.movie.title %></h6>
+              <p><%= bookmark.movie.overview %></p>
+              <div class="d-flex justify-content-between mt-3">
+                <p> "<em>- <%= bookmark.comment %> </em>"</p>
+                <strong class="red"><%= bookmark.movie.rating %></strong>
+              </div>
             </div>
           </div>
         </div>
