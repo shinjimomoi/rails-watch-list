@@ -1,16 +1,24 @@
 .banner {
   background-size: cover;
   background-position: center;
-  padding: 150px 0;
-  height: 500px;
-  background-image: asset-url(banner);
-  filter: grayscale(100%);
+  padding: 40vh 0;
+  height: 100vh;
+  background-image: asset-url(nature);
+  i {
+    font-size: 40px;
+    color: $light-gray;
+    bottom: 32px;
+      &:hover {
+        color: rgb(198, 198, 198) !important;
+      }
+  }
 }
 
 .banner h1 {
+  top: 45vh;
   margin: 0;
   color: white;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
   font-size: 72px;
   font-weight: bold;
 }
@@ -19,5 +27,9 @@
   font-size: 20px;
   color: white;
   opacity: .7;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+a {
+  text-decoration: none !important;
 }
