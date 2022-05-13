@@ -17,7 +17,7 @@
       <%= link_to 'Add a list', new_list_path, class: 'btn btn-primary btn-sm' %>
       <% @lists.each do |list| %>
         <div class="card-category mt-2 mb-3" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
-        url(http://source.unsplash.com/featured?<%= list.name %>&<%= rand(1000) %>)">
+        url(<%= list.photo.attached? ? cl_image_path(list.photo.key) : image_path("nature.jpg") %>)">
           <%= list.name %>
           <div>
             <%= link_to '', list_path(list), class: 'card-trip-link' %>
