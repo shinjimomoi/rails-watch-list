@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
   root to: 'lists#index'
   resources :lists, only: [:index, :show, :new, :create] do
-    resources :bookmarks, only: [:new, :create]  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+    resources :bookmarks, only: [:new, :create]
   end
-  # trying to commit
+
   resources :bookmarks, only: :destroy
+  resources :lists, only: :destroy
 end

@@ -37,14 +37,20 @@ body {
 .card-delete {
   display: none;
   position: absolute;
-  top: 32px;
-  right: 32px;
+  z-index: 1000;
+  top: 24px;
+  right: 24px;
   color: rgb(212, 212, 212);
-  font-size: 32px;
+  font-size: 24px;
   transition: 0.5s;
 }
 
-.card-trip:hover .card-delete  {
+.card-trip-link:hover, .card-trip:hover .card-delete  {
+  display: block;
+  color: $light-gray;
+}
+
+.card-category:hover .card-delete  {
   display: block;
   color: $light-gray;
 }

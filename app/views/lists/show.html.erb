@@ -24,8 +24,8 @@ url(http://source.unsplash.com/featured?<%= @list.name %>&<%= rand(1000) %>)">
     <% @list.bookmarks.each do |bookmark| %>
       <div class="mt-5 col-12 col-md-6 col-lg-4">
         <div class="card-trip ps-3 pe-3 pb-3 pt-3 m-2">
-          <%= link_to '', bookmark_path(bookmark), class: "card-delete fas fa-times", method: :delete, data: { confirm: "Remove #{bookmark.movie.title}?" } %>
           <%= image_tag bookmark.movie.poster_url, alttext: 'movie_image' %>
+          <%= link_to '', bookmark_path(bookmark), class: "card-delete fas fa-times", method: :delete, data: { confirm: "Remove #{bookmark.movie.title}?" } %>
           <div class="card-trip-infos">
             <div>
               <h6><%= bookmark.movie.title %></h6>
