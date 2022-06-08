@@ -1,12 +1,10 @@
-<div class="container mt-5">
-  <div class="d-flex justify-content-center">
-    <div class="col-12 col-lg-10">
-      <h1>Create a new list</h1>
-      <%= simple_form_for @list do |f| %>
-        <%= f.input :name, input_html: { placeholder: 'List name' } %>
-        <%= f.input :photo, as: :file %>
-        <%= f.submit class: 'btn btn-primary mt-2' %>
-      <% end %>
+<div class="container col-8 mt-5 offset-2">
+  <h2 class="">Create a new list</h2>
+  <%= simple_form_for @list do |f| %>
+    <div class="d-flex justify-content-center align-items-center">
+      <%= f.input :name, label: false, input_html: { placeholder: "List name", class: "input input-photo mt-3 mb-3" } %>
+      <%= f.input :photo, as: :file, label: false, class: 'ms-3' %>
     </div>
-  </div>
+      <%= f.submit 'Add', class: 'btn btn-primary mt-1'%>
+  <% end %>
 </div>
